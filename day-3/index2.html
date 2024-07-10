@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>30-Second Countdown Timer</title>
+</head>
+<body>
+    <div>
+        <h1 id="timer">10</h1>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <script>
+        var timeLeft = 10;
+        var timerInterval;
+
+        function updateTimerDisplay() {
+            document.getElementById('timer').textContent = timeLeft;
+        }
+
+        function startTimer() {
+            stopTimer(); // Ensure no multiple intervals running
+            timerInterval = setInterval(function() {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateTimerDisplay();
+                } else {
+                    alert("Time Out");
+                    resetTimer();
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function resetTimer() {
+            stopTimer();
+            timeLeft = 10;
+            updateTimerDisplay();
+        }
+
+        // Initial display update
+        updateTimerDisplay();
+    </script>
+</body>
+</html>

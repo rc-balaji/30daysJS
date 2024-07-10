@@ -12,6 +12,7 @@ function getRandom(length) {
 }
 
 function pick() {
+    
     placeholder.style.display = 'none';
     fight.style.display = 'flex';
 
@@ -24,11 +25,12 @@ function pick() {
         }, index * delay);
     });
 
-    setTimeout(()=>{
+    var times = setTimeout(()=>{
         var player1 = fighters[getRandom(length)];
         var player2 = fighters[getRandom(length)];
         var str = player1 + "vs" + player2;
         fight.innerText = str;
     }, countdownValues.length * delay);
+    
 }
 
