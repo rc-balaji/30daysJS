@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    color: #e98a1d;
+}
+
+.container{
+    width: 300px;
+    height: 400px;
+    font-family: 'Permanent Marker', cursive;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.innerContainer{
+    /* border: 1px solid black; */
+    margin: 10px;
+    height: 200px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fighters{
+    font-size: 60px;
+    display: none;
+}
+
+button{
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e98a1d;
+    border: #e98a1d;
+    color: white;
+    font-family: inherit;
+
+}
+
+.placeholder{
+    color: black;
+}
+
+.header{
+    text-shadow: 0px 3px 0px black;
+    line-height: 24px;
+    transform: rotate(-9deg);
+}
