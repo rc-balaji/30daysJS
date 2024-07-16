@@ -23,20 +23,32 @@ function getRandom(length) {
   return Math.floor(Math.random() * length);
 }
 
+
+
 function pick() {
   placeholder.style.display = "none";
   fighters.style.display = "block";
-  fighters.innerText = "3";
 
-  setTimeout(() => {
-    fighters.innerText = "2";
-  }, 1000);
-  setTimeout(() => {
-    fighters.innerText = "1";
-  }, 2000);
-  setTimeout(() => {
-    fighters.innerText = "GO";
-  }, 3000);
+
+  var mess = ["3","2","1","Go"]
+
+
+  
+    var arr_m  = mess.map((emoji,index)=>{
+      setTimeout(()=>{
+        fighters.innerText = emoji;
+      },index*1000)
+
+      return emoji+"Hello";
+  })
+
+
+  console.log(arr_m);
+
+
+  
+
+
   setTimeout(() => {
     var left = fighterArray[getRandom(length)];
     var right = fighterArray[getRandom(length)];
@@ -45,7 +57,6 @@ function pick() {
     fighters.innerText = picker;
   }, 4000);
 }
-
 
 
 
