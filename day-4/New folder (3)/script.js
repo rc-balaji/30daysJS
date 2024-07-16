@@ -65,6 +65,6 @@ data.forEach((item,index) => {
     string += val;
 });
 
-
+console.log(string);
 root.innerHTML = string;
 
