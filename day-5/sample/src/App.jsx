@@ -6,6 +6,7 @@ import img3 from "./images/image-3.jpg";
 import img4 from "./images/image-4.jpg";
 import img5 from "./images/image-5.jpg";
 import "./App.css";
+import Card from './Card'
 
 var data = [
   {
@@ -36,14 +37,7 @@ var data = [
   },
 ];
 
-function Card({imageurl,name}) {
-  return (
-    <div className="container">
-      <img src={imageurl} alt="" />
-      <p>{name}</p>
-    </div>
-  );
-}
+
 
 function App() {
   return (
