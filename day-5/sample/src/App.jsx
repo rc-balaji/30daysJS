@@ -1,54 +1,26 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
-import img1 from "./images/image-1.jpg";
-import img2 from "./images/image-2.jpg";
-import img3 from "./images/image-3.jpg";
-import img4 from "./images/image-4.jpg";
-import img5 from "./images/image-5.jpg";
-import "./App.css";
-import Card from './Card'
 
-var data = [
-  {
-    imageurl: img1,
-    
-    name: "Sami - 1",
-    url: "https://day-2222.netlify.app/",
-  },
-  {
-    imageurl: img2,
-    name: "Sami - 2",
-    url: "Page3.html",
-  },
-  {
-    imageurl: img3,
-    name: "Sami - 4",
-    url: "Page4.html",
-  },
-  {
-    imageurl: img4,
-    name: "Sami - 5",
-    url: "Page5.html",
-  },
-  {
-    imageurl: img5,
-    name: "Sami - 5",
-    url: "Page5.html",
-  },
-];
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Page1 from "./Components/Page1";
+import Page2 from "./Components/Page2";
+import Page3 from "./Components/Page3";
+import Page4 from "./Components/Page4";
 
-
-
-function App() {
+const App = () => {
   return (
-    <>
-      <div>
-        {data.map((value, index) => {
-          return <Card key={index} imageurl={value.imageurl} name={value.name} />;
-        })}
-      </div>
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/page1" element={<Page1 />} />
+          <Route path="/page2" element={<Page2 />} />
+          <Route path="/page3" element={<Page3 />} />
+          <Route path="/page4" element={<Page4 />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
-}
+};
 
 export default App;
