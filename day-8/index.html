@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="inp1" type="number" placeholder="Enter number 1" />
+    <input id="inp2" type="number" placeholder="Enter number 2" />
+    <p></p>
+    <p></p>
+
+    <button onclick="add()">Add</button>
+
+    <script>
+      var number1 = document.getElementById("inp1");
+      var number2 = document.getElementById("inp2");
+
+      var a = 5;
+      var b = 6;
+      console.log(eval("2 + 2 + 5 + 4 + 8"));
+      var result = document.querySelector("p");
+
+        // "2" --> "2+" -->"2+2"
+      function add() {
+        let res = parseInt(number1.value) + parseInt(number2.value);
+        result.innerText = "Total : " + res;
+
+        number1.value = "";
+        number2.value = "";
+        console.log(res);
+      }
+    </script>
+  </body>
+</html>
