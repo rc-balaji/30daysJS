@@ -1,0 +1,54 @@
+
+
+.header{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(41 37 36 );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    gap: 20px;
+    /* font-size: var(--font-size); */
+}
+
+.head{
+    font-weight: 800;
+    font-size: 1.9rem;
+    line-height: 2.25rem;
+        
+}
+
+
+
+#link{
+    text-decoration: none;
+
+    color: rgb(168 162 158);
+
+    border-bottom:2px solid rgb(168 162 158) ;
+}
+
+a:visited,
+a:active,
+a:hover,
+a:focus {
+    /* color: black; */
+    /* Keep the default color */
+    text-decoration: none;
+    /* Optional: to remove underline */
+}
+
+
+#para{
+    font-size: large;
+    width: 400px;
+    text-align: center;
+}
