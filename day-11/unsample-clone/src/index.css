@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans, Arial, sans-serif;
+    
+}
+
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --font-size: 12px
+}
+
+
+a:visited,
+a:active,
+a:hover,
+a:focus {
+  /* color: black; */
+  /* Keep the default color */
+  text-decoration: none;
+  /* Optional: to remove underline */
+}
